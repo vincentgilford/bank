@@ -60,7 +60,8 @@ public class BankApp {
 		System.out.println("3. Check balance");
 		System.out.println("4. Close Account");
 		System.out.println("5. Transfer Money");
-		System.out.println("6. Exit");
+		System.out.println("6. Bank Information");
+		System.out.println("7. Exit");
 		userMenu = input.nextLine().trim();  
 		
 		if(userMenu.equals("1")) {
@@ -93,8 +94,14 @@ public class BankApp {
 			double userAmountTransfer = input.nextDouble(); 
 			myBank.transferMoney(userAccount, userTransfer, userAmountTransfer);
 		}
+		
+		if(userMenu.equals("6")) {
+			System.out.println("Account information: \n" + "Account number: " + myBank.getBankAccountNumber(userAccount).getAccountNum() + "\nAccount Type: " +
+					myBank.getBankAccountNumber(userAccount).getAccountType() + "\nAccount Balance: " + myBank.getBankAccountNumber(userAccount).getBankBalance());
+		}
+		
 		input.nextLine();
-		} while(!userMenu.equals("6"));
+		} while(!userMenu.equals("7"));
 		
 		
 		

@@ -62,7 +62,16 @@ public class BankAccountTest {
 		assertEquals(100.00,check, .001);
 	}
 	
-	
+//	@Test
+//	public void overDraftMethodTest() {
+//		BankAccount underTest = new BankAccount("1111","checking",100.00);
+//		
+//		underTest.withDrawMoney(200.00);
+//		
+//		
+//		assertEquals();
+//		
+//	}
 	
 	
 	
