@@ -59,7 +59,8 @@ public class BankApp {
 		System.out.println("2. Withdraw");
 		System.out.println("3. Check balance");
 		System.out.println("4. Close Account");
-		System.out.println("5. Exit");
+		System.out.println("5. Transfer Money");
+		System.out.println("6. Exit");
 		userMenu = input.nextLine().trim();  
 		
 		if(userMenu.equals("1")) {
@@ -84,8 +85,16 @@ public class BankApp {
 			myBank.closeBankAccount(userClose);
 			System.out.println("Account Closed!, Thank you for your business.");
 		}
+		
+		if(userMenu.equals("5")) {
+			System.out.println("Please pick Account Number for transfer:");
+			String userTransfer = input.nextLine();
+			System.out.println("Please enter amount you would like to transfer:");
+			double userAmountTransfer = input.nextDouble(); 
+			myBank.transferMoney(userAccount, userTransfer, userAmountTransfer);
+		}
 		input.nextLine();
-		} while(!userMenu.equals("5"));
+		} while(!userMenu.equals("6"));
 		
 		
 		
