@@ -67,13 +67,13 @@ public class BankApp {
 		if(userMenu.equals("1")) {
 			System.out.println("How much to deposit");
 			double userDeposit = input.nextDouble();
-			myBank.getBankAccountNumber(userAccount).addMoney(userDeposit);
+			myBank.bankDeposit(userAccount, userDeposit);;
 		}
 		
 		if(userMenu.equals("2")) {
 			System.out.println("How much to withdraw");
 			double userWithdrawal = input.nextDouble();
-			myBank.getBankAccountNumber(userAccount).withDrawMoney(userWithdrawal);
+			myBank.bankWithdrawal(userAccount, userWithdrawal);
 		}
 		
 		if(userMenu.equals("3")) {
@@ -102,11 +102,7 @@ public class BankApp {
 		
 		input.nextLine();
 		} while(!userMenu.equals("7"));
-		
-		
-		
-		
-		
+		System.out.println("Thank you for your services!");
 		
 		
 	}

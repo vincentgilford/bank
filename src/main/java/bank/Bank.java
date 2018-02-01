@@ -49,6 +49,16 @@ public class Bank {
 		return accounts.get(accountNum); 
 	}
 	
+	public void bankWithdrawal(String accountNum, double moneyWithdraw) {
+		accounts.get(accountNum).withDrawMoney(moneyWithdraw);
+		
+	}
+	
+	public void bankDeposit(String accountNum, double moneyDeposit) {
+		accounts.get(accountNum).addMoney(moneyDeposit);
+	}
+	
+	
 //	public BankAccount getBankAccount(String accountNum) {
 //			return account.get
 //		
