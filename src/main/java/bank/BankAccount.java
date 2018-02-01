@@ -26,6 +26,13 @@ public class BankAccount {
 
 	public double withDrawMoney(double moneyWithdraw) {
 		// TODO Auto-generated method stub
+		if(moneyWithdraw>balance) {
+			//callOverDraftMethod
+			moneyWithdraw = 0.00;
+			System.out.println("OverDraft not enough money to withdraw");
+			return moneyWithdraw; 
+		}
+		
 		balance -= moneyWithdraw;
 		return moneyWithdraw;
 	}

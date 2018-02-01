@@ -34,6 +34,28 @@ public class Bank {
 		moneyTransfer = accounts.get(accountNum).withDrawMoney(amountTransfer);
 		accounts.get(transferAccountNum).addMoney(moneyTransfer);
 	}
+
+	public void closeBankAccount(String accountNum) {
+		// TODO Auto-generated method stub
+		accounts.remove(accountNum);
+	}
+	
+	public Collection<BankAccount> returnTotalAccounts(){
+		return accounts.values(); 
+	
+	}
+	
+	public BankAccount getBankAccountNumber(String accountNum) {
+		return accounts.get(accountNum); 
+	}
+	
+//	public BankAccount getBankAccount(String accountNum) {
+//			return account.get
+//		
+//	}
+//	
+	
+	
 	
 	
 //	public Collection<BankAccount> bankAccountInformation(){

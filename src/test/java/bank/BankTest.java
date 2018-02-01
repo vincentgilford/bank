@@ -46,7 +46,7 @@ public class BankTest {
 	@Test
 	public void assertTransferBankAccount() {
 		Bank underTest = new Bank(); 
-		Bank transferTest = new Bank(); 
+//		Bank transferTest = new Bank(); 
 		underTest.addAccount(new BankAccount("1111","checking",100.00));
 		underTest.addAccount(new BankAccount("2222","checking",100.00));
 		
@@ -56,9 +56,20 @@ public class BankTest {
 		
 		assertEquals(50.00,check,.001);
 		assertEquals(150.00,checkTransfer ,.001);
-		
-		
 	}
+	
+	@Test
+	public void closeBankAccountTest() {
+		Bank underTest = new Bank(); 
+		underTest.addAccount(new BankAccount("1111","checking",100.00));
+		
+		underTest.closeBankAccount("1111");
+		int check = underTest.sizeOfAccount();
+	
+		assertEquals(0,check);
+	}
+	
+	
 	
 	
 	
